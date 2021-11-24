@@ -1,0 +1,119 @@
+body {
+    background-image: url('../img/grey.jpg');
+}
+html {
+    font-family: 'Press Start 2P', cursive;
+}
+p {
+    margin: 0;
+}
+
+.img_edit, .img_delete {
+    max-width: 20px;
+}
+.success {
+    list-style-type: none;
+    text-align: center;
+    color: green;
+    font-size: x-large;
+    max-width: 500px;
+    margin: auto;
+    background-color: ivory;
+}
+.list_item_h1 {
+    text-align: center;
+}
+.list_item_form * {
+    margin-bottom: 12px;
+}
+.list_item_input {
+    background-color: #212529;
+    color: white;
+    padding: 0.5em;
+    border-radius: 0.25rem;
+}
+.home_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-content: center;
+}
+.form_grid_a {
+    grid-column-start: 2;
+    grid-row-start: 2;
+    padding: 20px;
+    text-align: center;
+}
+.form_grid_a > input {
+    background-color: #F8F9FA;
+   padding: 0.5em;
+   color: black;
+   border-radius: 0.4em;
+   font-weight: bolder;
+   border: none;
+
+
+}
+.form_grid_b {
+    grid-column-start: 3;
+    grid-row-start:2 ;
+    padding: 20px;
+    text-align: center;
+
+}
+.form_grid_b > input {
+    background-color: #F8F9FA;
+    padding: 0.5em;
+    color: black;
+    border-radius: 0.4em;
+    font-weight: bolder;
+    border: none;
+
+
+ }
+.form_grid_c {
+    grid-column-start: 2;
+    grid-column-end:3;
+    grid-row-start: 3;
+    grid-row-end: 3;
+    padding: 20px;
+    text-align: center;
+}
+.form_grid_c > input {
+    background-color: #F8F9FA;
+    padding: 0.5em;
+    color: black;
+    border-radius: 0.4em;
+    font-weight: bolder;
+    border: none;
+ }
+ .center {
+     text-align: center;
+ }
+ .home_actions {
+     margin-top: 2em;
+ }
+ .home_actions > h2 {
+    text-align: center;
+    margin: auto;
+    background-color: #BB2D3B;
+    color: white;
+    font-weight: bold;
+    max-width: 30%;
+    border-radius: 0.4em;
+    padding: 0.3em;
+
+}
+.paging-nav {
+    text-align: right;
+}
+.paging-nav > a{
+    margin-right: 0.5em;
+    text-decoration-line: none;
+    color: #BB2D3B;
+    font-weight: bold;
+}
+.selected-page {
+    font-size: x-large;
+}
+
