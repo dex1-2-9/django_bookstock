@@ -15,6 +15,11 @@ category_choice = (
 )
 
 
+class Kategorie(models.Model):
+    item_name = models.CharField(max_length=50, blank=True, null=True)
+    def __str__(self):
+        return self.item_name
+
 class Stock(models.Model):
     category = models.CharField(max_length=50, blank=True, null=True, choices=category_choice)
     item_name = models.CharField(max_length=50, blank=True, null=True)
