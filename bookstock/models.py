@@ -2,17 +2,17 @@ from django.db import models
 
 # Create your models here.
 
-category_choice = (
-    ('Sci-Fi', 'Sci-Fi'),
-    ('Fantasy', 'Fantasy'),
-    ('History', 'History'),
-    ('Comics','Comics'),
-    ('Poetry', 'Poetry'),
-    ('Science','Science'),
-    ('Action', 'Action'),
-    ('Adventure', 'Adventure'),
-    ('Nature', 'Nature')
-)
+#category_choice = (
+#    ('Sci-Fi', 'Sci-Fi'),
+#    ('Fantasy', 'Fantasy'),
+#    ('History', 'History'),
+#    ('Comics','Comics'),
+#    ('Poetry', 'Poetry'),
+#    ('Science','Science'),
+#    ('Action', 'Action'),
+#    ('Adventure', 'Adventure'),
+#    ('Nature', 'Nature')
+#)
 
 
 class Kategorie(models.Model):
@@ -21,7 +21,7 @@ class Kategorie(models.Model):
         return self.item_name
 
 class Stock(models.Model):
-    category = models.CharField(max_length=50, blank=True, null=True, choices=category_choice)
+    category = models.ForeignKey(Kategorie, on_delete=models.CASCADE)
     item_name = models.CharField(max_length=50, blank=True, null=True)
     quantity = models.PositiveSmallIntegerField(default='1', blank=False, null=True)
     receive_quantity = models.IntegerField(default='0', blank=True, null=True)

@@ -28,7 +28,7 @@ def list_item(request):
 		"form": form
 	}
 	if request.method == 'POST':
-		queryset = Stock.objects.filter(category__icontains=form['category'].value(),
+		queryset = Stock.objects.filter(category__id__icontains=form['category'].value(),
 										item_name__icontains=form['item_name'].value(),
 										last_updated__range=[
 											form['start_date'].value(),
