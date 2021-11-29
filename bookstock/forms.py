@@ -10,7 +10,7 @@ class StockCreateForm(forms.ModelForm):
     def clean_category(self):
 	    category = self.cleaned_data.get('category')
 	    if not category:
-		    raise forms.ValidationError('This field is required')
+		    raise forms.ValidationError('This field is requifred')
 	    return category
 
 
@@ -22,8 +22,8 @@ class StockCreateForm(forms.ModelForm):
 
 class StockSearchForm(forms.ModelForm):
     #export_to_CSV = forms.BooleanField(required=False)
-    start_date = forms.DateTimeField(required=False)
-    end_date = forms.DateTimeField(required=False)
+    start_date = forms.DateTimeField(required=True)
+    end_date = forms.DateTimeField(required=True)
     class Meta:
         model = Stock
         fields = ['category', 'item_name','start_date','end_date']
